@@ -1,0 +1,340 @@
+:root {
+    --sony-blue: #00439c;
+    --bg-dark: #101010;
+    --text-white: #ffffff;
+    --focus-border: 4px solid white;
+    --card-width: 200px;
+    --card-height: 200px;
+    --card-gap: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    height: 100vh;
+    overflow: hidden;
+    /* Importante para não ter barra de rolagem */
+}
+
+
+/* --- FUNDOS --- */
+
+.bg-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transition: background-image 0.5s ease-in-out;
+    filter: blur(5px);
+    opacity: 0.6;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: -1;
+}
+
+.ui-container {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* --- HEADER ATUALIZADO --- */
+
+.top-bar {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+
+/* User Status */
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
+}
+
+.mini-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-game-title {
+    font-size: px;
+    font-weight: 300;
+}
+
+.user-sub {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+}
+
+.badge-mini {
+    border: 1px solid #ccc;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 9px;
+}
+
+
+/* Menu Central */
+
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--text-white);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--sony-blue);
+    box-shadow: 0 0 10px var(--sony-blue);
+}
+
+
+/* Tooltip Sobre Nós */
+
+.tooltip-box {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(16, 16, 16, 0.95);
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    text-transform: none;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.tooltip-box strong {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.has-tooltip:hover .tooltip-box {
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+}
+
+
+/* Barra de Pesquisa */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.search-container:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    width: 270px;
+}
+
+.search-icon {
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+
+/* --- CARROSSEL --- */
+
+.section-title {
+    font-weight: 300;
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: var(--card-gap);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    padding-left: 20px;
+}
+
+.game-card {
+    width: var(--card-width);
+    height: var(--card-height);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    opacity: 0.7;
+    position: relative;
+    border-radius: 4px;
+}
+
+
+/* Estado Ativo do Card */
+
+.game-card.active {
+    transform: scale(1.5);
+    opacity: 1;
+    z-index: 10;
+    border: var(--focus-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    margin: 0 40px;
+}
+
+
+/* --- INFO PANEL --- */
+
+.info-panel {
+    margin-top: 20px;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.info-panel.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.game-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.game-price {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.game-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 2px 6px;
+    font-size: 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.release-date {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.game-desc {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ddd;
+    font-weight: 300;
+}
