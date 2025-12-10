@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store Ultimate</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-backdrop" id="bg-backdrop"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="ui-container">
+
+        <header class="top-bar">
+            <div class="user-status">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/1620/a9Vd2b0G8v1d8W8a9d1.png" class="mini-icon" alt="User">
+                <div class="user-text">
+                    <span class="user-game-title">Gamer</span>
+                    <span class="badge-mini">ONLINE</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-item" onclick="toggleModal()"><i class="fas fa-circle-info"></i> Sobre</a>
+                <a href="#" class="nav-item" onclick="toggleProfile()"><i class="fas fa-gamepad"></i> Perfil</a>
+            </nav>
+
+            <div class="search-container">
+                <i class="fas fa-search" style="color: #aaa;"></i>
+                <input type="text" placeholder="Buscar jogo..." class="search-input">
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="info-panel" id="info-panel">
+                <h2 class="section-title">Recomendado</h2>
+                <h1 class="game-title" id="game-title">Carregando...</h1>
+
+                <div class="game-meta">
+                    <span class="badge" id="badge-1">GENRE</span>
+                    <span class="badge-text" id="release-date">0000</span>
+                </div>
+
+                <div class="game-price" id="game-price">--</div>
+
+                <p class="game-desc" id="game-desc">
+                    Aguarde o carregamento...
+                </p>
+
+                <button class="btn-play" onclick="openGameLink()">
+                    <i class="fas fa-play"></i> VER MAIS 
+                </button>
+            </div>
+
+            <div class="feature-image-container" id="feature-container">
+                <img id="feature-img" src="" class="feature-img" alt="Destaque">
+            </div>
+        </main>
+
+        <div class="carousel-area">
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="track"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modal-sobre" class="modal-backdrop" onclick="closeModalOutside(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleModal()">&times;</span>
+
+            <h2 class="terminal-title">
+                <i class="fas fa-terminal"></i> SYSTEM ACCESS
+            </h2>
+
+            <div class="terminal-body">
+                <p class="typing">> INICIANDO PROTOCOLO...</p>
+                <p class="typing">> CARREGANDO DADOS...</p>
+                <br>
+                <p>Bem-vindo ao <strong>HUB CENTRAL</strong> de entretenimento digital.</p>
+                <p>A <strong>Game Store Ultimate</strong> opera nas frequências mais altas para entregar diversão pura diretamente para o seu neural link.</p>
+                <br>
+                <div class="system-stats">
+                    <p>> STATUS: <span style="color: #00ce79;">ONLINE</span></p>
+                    <p>> DEV: <span style="color: #00ce79;">RAFAEL HENRIQUE e JOÃO VITOR </span></p>
+                    <p>> VERSÃO: <span style="color: #00ce79;">0.0.1</span></p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <p>SECURE CONNECTION // ENCRYPTED</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-perfil" class="modal-backdrop" onclick="closeModalOutside(event)">
+        <div class="modal-content profile-modal">
+            <span class="close-btn" onclick="toggleProfile()">&times;</span>
+
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active" onclick="switchAuth('login')">LOGIN</button>
+                <button id="tab-register" class="auth-tab" onclick="switchAuth('register')">REGISTRO</button>
+            </div>
+
+            <div id="form-login" class="auth-form">
+                <h2 class="auth-title">Bem-vindo de volta!</h2>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Seu E-mail">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Sua Senha">
+                </div>
+
+                <div class="form-options">
+                    <label><input type="checkbox"> Lembrar</label>
+                    <a href="#">Esqueceu?</a>
+                </div>
+
+                <button class="btn-submit">ENTRAR NA CONTA</button>
+
+                <div class="social-login">
+                    <p>Ou entre com:</p>
+                    <div class="social-icons">
+                        <i class="fab fa-google"></i>
+                        <i class="fab fa-playstation"></i>
+                        <i class="fab fa-steam"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="form-register" class="auth-form" style="display: none;">
+                <h2 class="auth-title">Crie sua conta</h2>
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nome de Usuário">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Seu E-mail">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Sua Senha">
+                </div>
+
+                <button class="btn-submit">CRIAR CONTA</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
