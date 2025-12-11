@@ -8,7 +8,7 @@ const games = [{
         badges: ["RPG", "OPEN WORLD"],
         date: "2020",
         desc: "Um RPG de ação em mundo aberto ambientado em Night City, uma megalópole obcecada por poder e modificações corporais.",
-        url: "../cyber/cyber.html"
+        url: "cyber/cyber.html"
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const games = [{
         badges: ["ACTION", "SURVIVAL"],
         date: "2020",
         desc: "Cinco anos após sua jornada, Ellie busca vingança em uma Seattle devastada, enfrentando novos perigos e dilemas morais.",
-        url: "../the last/thelast.html"
+        url: "the last/thelast.html"
     },
     {
         id: 3,
@@ -30,84 +30,84 @@ const games = [{
         badges: ["ZOMBIE", "PARKOUR"],
         date: "2025",
         desc: "Retorne como Kyle Crane em uma nova aventura de sobrevivência zumbi, misturando parkour brutal e poderes bestiais.",
-        url: "../dying/dying.html"
+        url: "dying/dying.html"
     },
     {
         id: 4,
         title: "CLAIR OBSCUR: EXPEDITION 33",
         price: "R$ 299,90",
-        image: "../Expedition 33/foto/fundo.webp",
-        bg: "../Expedition 33/foto/fundo.webp",
+        image: "Expedition 33/foto/fundo.webp",
+        bg: "Expedition 33/foto/fundo.webp",
         badges: ["RPG", "TURN-BASED"],
         date: "2025",
         desc: "Lidere a Expedição 33 em uma jornada desesperada para destruir a Pintora e impedir que ela pinte a morte sobre o mundo.",
-        url: "../Expedition 33/expedition.html"
+        url: "Expedition 33/expedition.html"
     },
     {
         id: 5,
         title: "SHADOW OF THE COLOSSUS",
         price: "R$ 99,50",
-        image: "../shadow of the colossus/foto/fundov2.jpg",
-        bg: "../shadow of the colossus/foto/fundov2.jpg",
+        image: "shadow of the colossus/foto/fundov2.jpg",
+        bg: "shadow of the colossus/foto/fundov2.jpg",
         badges: ["ADVENTURE", "CLASSIC"],
         date: "2018",
         desc: "Viaje por uma terra vasta e derrote 16 colossos gigantes para trazer uma garota de volta à vida neste clássico recriado.",
-        url: "../teste/shadow of the colossus/shadow.html"
+        url: "teste/shadow of the colossus/shadow.html"
     },
     {
         id: 6,
         title: "Forza Horizon 4",
         price: "R$ 249,00",
-        image: "../Forza Horizon 4/fotos/01.jpg",
-        bg: "../foto/FZ4.png",
+        image: "Forza Horizon 4/fotos/01.jpg",
+        bg: "foto/FZ4.png",
         badges: ["Race", "Open-World"],
         date: "2018",
         desc: "Explore a Grã-Bretanha em um mundo aberto compartilhado, onde as estações mudam tudo em festivais de corrida dinâmicos.",
-        url: "../Forza Horizon 4/forza.html"
+        url: "Forza Horizon 4/forza.html"
     },
     {
         id: 7,
         title: "GTA V",
         price: "R$ 82,00",
-        image: "../GTAV/fotos/01.jpg",
-        bg: "../GTAV/fotos/01.jpg",
+        image: "GTAV/fotos/01.jpg",
+        bg: "GTAV/fotos/01.jpg",
         badges: ["ACTION", "OPEN WORLD"],
         date: "2013",
         desc: "Três criminosos muito diferentes planejam grandes assaltos em Los Santos, uma metrópole ensolarada e implacável.",
-        url: "../GTAV/GTAV.html"
+        url: "/GTAV/GTAV.html"
     },
     {
         id: 8,
         title: "PALWORLD",
         price: "R$ 88,99",
-        image: "../Palworld/fotos/palworld-1.jpg",
-        bg: "../Palworld/fotos/trailer-pw.jpg",
+        image: "Palworld/fotos/palworld-1.jpg",
+        bg: "Palworld/fotos/trailer-pw.jpg",
         badges: ["Open-World", "SURVIVAL"],
         date: "2024",
         desc: "Colete criaturas misteriosas chamadas 'Pals' para lutar, construir, plantar e trabalhar em um mundo de sobrevivência multijogador.",
-        url: "../Palworld/Palworld.html"
+        url: "Palworld/Palworld.html"
     },
     {
         id: 9,
         title: "Battlefield 6",
         price: "R$ 299,00",
-        image: "../BF6/fotos/BF6LOGO.webp",
-        bg: "../BF6/fotos/BF6LOGO.webp",
+        image: "BF6/fotos/BF6LOGO.webp",
+        bg: "BF6/fotos/BF6LOGO.webp",
         badges: ["Shooter", "ACTION"],
         date: "2025",
         desc: "Guerra total em escala massiva com destruição dinâmica, combates intensos e veículos em mapas gigantescos.",
-        url: "../BF6/BF6.html"
+        url: "BF6/BF6.html"
     },
     {
         id: 10,
         title: "Red Dead Redemption 2",
         price: "R$ 299,90",
-        image: "../Reddead2/fotos/01.jpg",
-        bg: "../Reddead2/fotos/01.jpg",
+        image: "Reddead2/fotos/01.jpg",
+        bg: "Reddead2/fotos/01.jpg",
         badges: ["Open-World", "ACTION"],
         date: "2018",
         desc: "A saga épica de Arthur Morgan e a gangue Van der Linde fugindo da lei no fim da era do Velho Oeste americano.",
-        url: "../Reddead2/RD2.html"
+        url: "Reddead2/RD2.html"
     }
 ];
 
@@ -271,3 +271,4 @@ function closeModalOutside(event) {
 
 
 document.addEventListener('DOMContentLoaded', init);
+
