@@ -1,0 +1,411 @@
+/* Reset Básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    background: url('fotos/bg-cyber.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: -1;
+}
+
+
+/* --- HEADER EDITADO --- */
+
+header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+/* Novo Grupo: Logo + Botão */
+
+.header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Espaço entre o logo e o botão */
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-shadow: 2px 2px 0px #00f0ff;
+}
+
+
+/* --- ESTILO DO BOTÃO DE MÚSICA NEON --- */
+
+.neon-music-btn {
+    background: transparent;
+    border: 2px solid #fcee0a;
+    /* Amarelo */
+    color: #fcee0a;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.neon-music-btn:hover {
+    background: #fcee0a;
+    color: black;
+    box-shadow: 0 0 15px #fcee0a;
+}
+
+
+/* Classe "Tocando" (Ativada pelo JS) */
+
+.neon-music-btn.playing {
+    border-color: #00f0ff;
+    /* Azul Neon */
+    color: #00f0ff;
+    animation: pulseNeon 1.5s infinite alternate;
+}
+
+.neon-music-btn.playing:hover {
+    background: #00f0ff;
+    color: black;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+@keyframes pulseNeon {
+    from {
+        box-shadow: 0 0 5px #00f0ff;
+    }
+    to {
+        box-shadow: 0 0 25px #00f0ff;
+    }
+}
+
+
+/* ------------------------------------- */
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fcee0a;
+    transition: 0.3s;
+    text-shadow: 0 0 5px rgba(252, 238, 10, 0.5);
+}
+
+.menu a:hover {
+    color: white;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.search {
+    cursor: pointer;
+    color: #00f0ff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 80px);
+    padding: 0 50px;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: -5px;
+    color: #fcee0a;
+}
+
+.main-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 0.9;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+.about-box {
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-left: 4px solid #fcee0a;
+}
+
+.about-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.btn-preorder {
+    display: inline-block;
+    background-color: #fcee0a;
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-preorder:hover {
+    background-color: #00f0ff;
+    color: black;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+.socials {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials i {
+    font-size: 1.2rem;
+    color: #fcee0a;
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    color: #00f0ff;
+}
+
+.studio-logo {
+    border-left: 2px solid #00f0ff;
+    padding-left: 15px;
+    line-height: 1.2;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.awards {
+    margin-bottom: 40px;
+    width: 320px;
+}
+
+.awards h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fcee0a;
+    display: inline-block;
+}
+
+.awards ul {
+    list-style: none;
+}
+
+.awards li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.awards li span {
+    font-size: 0.8rem;
+    color: #fcee0a;
+}
+
+.trailer-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.video-thumbnail {
+    width: 300px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #00f0ff;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    opacity: 0.8;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fcee0a;
+    color: black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fcee0a;
+    box-shadow: 0 0 30px rgba(252, 238, 10, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    background: #fcee0a;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.close-btn:hover {
+    background: #00f0ff;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header-left-group {
+        justify-content: center;
+    }
+    /* Centraliza logo e botão no mobile */
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search,
+    .spacer {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .content-left {
+        text-align: center;
+        align-items: center;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    .socials {
+        justify-content: center;
+    }
+    .content-right {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .awards,
+    .video-thumbnail {
+        width: 100%;
+    }
+}
