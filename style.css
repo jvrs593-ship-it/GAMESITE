@@ -14,9 +14,7 @@ body {
     overflow: hidden;
 }
 
-
 /* Fundo e Overlay */
-
 .bg-backdrop {
     position: fixed;
     top: 0;
@@ -181,9 +179,7 @@ body {
     transform: translateX(0);
 }
 
-
 /* Imagem Destaque (PRINCIPAL) */
-
 .feature-image-container {
     display: block;
     width: 100%;
