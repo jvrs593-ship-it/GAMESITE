@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 2 - Official Site</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="film-grain"></div>
+    <div class="vignette"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">ROCKSTAR GAMES PRESENTS<br><span class="game-title">RED DEAD REDEMPTION II</span></div>
+
+            <button id="musicBtn" class="western-btn" title="Ouvir Trilha Sonora">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">História</a></li>
+                <li><a href="#">Red Dead Online</a></li>
+                <li><a href="#">Personagens</a></li>
+                <li><a href="#">Mapa</a></li>
+                <li><a href="#">Social Club</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            PROCURAR <i class="fas fa-search" style="font-size: 0.8rem;"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">OUTLAWS FOR LIFE</h4>
+
+            <h1 class="main-headline">AMERICA, <span class="year-highlight">1899</span></h1>
+
+            <div class="journal-box">
+                <div class="paper-texture"></div>
+                <h3>O FIM DO VELHO OESTE</h3>
+                <p>
+                    Arthur Morgan e o gang de Van der Linde são forçados a fugir. Com agentes federais e os melhores caçadores de recompensas da nação no seu encalço, o bando deve roubar e lutar para sobreviver no coração acidentado da América.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-buy">COMPRAR AGORA</a>
+                </div>
+            </div>
+
+            <div class="socials">
+                <div class="wanted-poster-line"></div>
+                <a href="#"><i class="fab fa-rockstar"></i></a>
+                <a href="#"><i class="fab fa-xbox"></i></a>
+                <a href="#"><i class="fab fa-playstation"></i></a>
+                <a href="#"><i class="fab fa-steam"></i></a>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="accolades">
+                <h3>ACLAMAÇÃO CRÍTICA</h3>
+                <div class="stars">★★★★★</div>
+                <ul>
+                    <li><strong>The Game Awards</strong> - Melhor Narrativa <br><span>Vencedor 2018</span></li>
+                    <li><strong>The Game Awards</strong> - Melhor Banda Sonora <br><span>Vencedor 2018</span></li>
+                    <li><strong>Steam Awards</strong> - Jogo do Ano <br><span>Vencedor 2020</span></li>
+                    <li><strong>Metacritic</strong> - Must-Play <br><span>Pontuação 97/100</span></li>
+                </ul>
+            </div>
+
+            <div class="media-box">
+                <h3>GALERIA</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="fotos/01.jpg" alt="Arthur Morgan">
+                    <div class="ink-overlay"></div>
+                    <div class="play-btn"><i class="fas fa- revolver"></i></div>
+                </div>
+                <small class="caption">Arthur Morgan - Van der Linde Gang</small>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/RDR2_Trailer.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/RDR2_Theme.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
