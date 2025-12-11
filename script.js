@@ -3,8 +3,8 @@ const games = [{
         id: 1,
         title: "CYBERPUNK 2077",
         price: "R$ 199,90",
-        image: "../cyber/fotos/bg-cyber.jpg",
-        bg: "../cyber/fotos/bg-cyber.jpg",
+        image: "cyber/fotos/bg-cyber.jpg",
+        bg: "cyber/fotos/bg-cyber.jpg",
         badges: ["RPG", "OPEN WORLD"],
         date: "2020",
         desc: "Um RPG de ação em mundo aberto ambientado em Night City, uma megalópole obcecada por poder e modificações corporais.",
@@ -268,5 +268,6 @@ function closeModalOutside(event) {
     if (event.target === modalSobre) modalSobre.style.display = 'none';
     if (event.target === modalPerfil) modalPerfil.style.display = 'none';
 }
+
 
 document.addEventListener('DOMContentLoaded', init);
