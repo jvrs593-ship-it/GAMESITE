@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Colossus</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="particles"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">SHADOW OF THE <br><span>COLOSSUS</span></div>
+
+            <button id="musicBtn" class="sigil-music-btn" title="The Opened Way">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">The Shrine</a></li>
+                <li><a href="#">Colossi</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Lore</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Remake</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h1 class="main-title">
+                <span class="title-small">SHADOW</span><br> OF THE
+                <br>
+                <span class="highlight-text">COLOSSUS</span>
+            </h1>
+            <div class="about-box">
+                <h3>SOBRE O JOGO</h3>
+                <p>
+                    Em uma terra antiga e desolada, um guerreiro busca o poder de reviver um amor perdido. Armado apenas com uma espada mágica e seu arco, Wander deve viajar pelas terras proibidas e derrotar os dezesseis Colossos. Mas o preço desse poder pode ser maior do
+                    que ele imagina.
+                </p>
+                <a href="#" class="btn-preorder">ENTER THE LAND</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-playstation"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="studio-logo">
+                    <small>Original by Team Ico</small><br>
+                    <strong>BLUEPOINT GAMES</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="awards">
+                <h3>PRÊMIOS & INDICAÇÕES</h3>
+                <ul>
+                    <li><strong>BAFTA Games Awards</strong> - Realização Artística <br><span>Vencedor</span></li>
+                    <li><strong>Game Developers Choice</strong> - Melhor Game Design <br><span>Vencedor</span></li>
+                    <li><strong>The Game Awards</strong> - Melhor Direção de Arte <br><span>Remake (2018)</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3>TRAILER DE LANÇAMENTO</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="foto/fundo.jpg" alt="Trailer SOTC">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/Shadow of the Colossus _ Launch Trailer _ PS4.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/Shadow of the Colossus - Soundtrack Ps4 - The Beginning [vKsusRSPYsg].mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

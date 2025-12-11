@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dying Light: The Beast - Official Site</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">DYING LIGHT <br><span style="color: #ff3333;">THE BEAST</span></div>
+
+            <button id="musicBtn" class="beast-music-btn" title="Atmosphere">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Kyle Crane</a></li>
+                <li><a href="#">Castor Woods</a></li>
+                <li><a href="#">Gameplay</a></li>
+                <li><a href="#">Bestiário</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">DYING LIGHT</h4>
+            <h1 class="main-title">THE <span style="color: #ff3333; display:block;">BEAST</span></h1>
+
+            <div class="about-box">
+                <h3 style="color: #ff3333;">O RETORNO DA LENDA</h3>
+                <p>
+                    Kyle Crane está livre após 13 anos de experimentos cruéis. Agora, com o DNA entrelaçado ao do zumbi, uma fera cresce dentro dele. Sobreviva em Castor Woods, use seus novos poderes predatórios e descubra que a vingança não é a única coisa que você deve
+                    temer.
+                </p>
+                <a href="#" class="btn-preorder">COMPRE O JOGO</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="studio-logo">
+                    <small>Developed by</small><br>
+                    <strong>TECHLAND</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="awards">
+                <h3 style="color: #ff3333;">DESTAQUES</h3>
+                <ul>
+                    <li><strong>Gamescom 2024</strong> - Anúncio Mundial <br><span>Agosto, 2024</span></li>
+                    <li><strong>IGN First</strong> - Retorno de Kyle Crane <br><span>Setembro, 2024</span></li>
+                    <li><strong>Horror Awards</strong> - Jogo Mais Aguardado <br><span>Outubro, 2024</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3 style="color: #ffffff;">ANNOUNCEMENT TRAILER</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="foto/logo.jpg" alt="Trailer Dying Light">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/Dying Light Trailer.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/41 - Dying Light The Beast - Acoustic.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

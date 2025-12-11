@@ -1,0 +1,460 @@
+/* Reset Básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    /* Impede rolagem para manter estilo "app" */
+    background: url('https://i.redd.it/kdj0n13ajwka1.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+}
+
+
+/* Overlay Escuro para melhorar leitura */
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 90%);
+    z-index: -1;
+}
+
+
+/* Header e Navegação */
+
+header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    /* --- MUDANÇA 1: Necessário para centralizar o menu --- */
+    position: relative;
+}
+
+
+/* --- MUDANÇA 2: Centraliza o menu na tela --- */
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Agrupa Logo e Botão de Música */
+
+.header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+}
+
+.logo span {
+    font-size: 0.7rem;
+    color: #ccc;
+}
+
+
+/* --- Estilos do Botão de Música (Tema TLOU) --- */
+
+.neon-music-btn {
+    background: transparent;
+    border: 2px solid white;
+    /* Começa Branco */
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.neon-music-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+/* TOCANDO: Fica VERMELHO SANGUE */
+
+.neon-music-btn.playing {
+    border-color: #c92626;
+    color: #c92626;
+    animation: pulseRed 1.5s infinite alternate;
+}
+
+.neon-music-btn.playing:hover {
+    background: #c92626;
+    color: white;
+    box-shadow: 0 0 15px #c92626;
+}
+
+@keyframes pulseRed {
+    from {
+        box-shadow: 0 0 5px rgba(201, 38, 38, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(201, 38, 38, 0.9);
+    }
+}
+
+
+/* ---------------------------------------------------- */
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.search {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Layout Principal */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 80px);
+    padding: 0 50px;
+    align-items: center;
+}
+
+
+/* Coluna Esquerda */
+
+.subtitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+}
+
+.main-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    line-height: 0.9;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-box {
+    max-width: 400px;
+}
+
+.about-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.about-box p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.btn-preorder {
+    display: inline-block;
+    background-color: #c92626;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+    transition: background 0.3s;
+}
+
+.btn-preorder:hover {
+    background-color: #a11b1b;
+}
+
+.socials {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials i {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.studio-logo {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    line-height: 1.2;
+}
+
+
+/* Coluna Direita */
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.awards {
+    margin-bottom: 50px;
+    width: 300px;
+}
+
+.awards h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.awards ul {
+    list-style: none;
+}
+
+.awards li {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.awards li span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.trailer-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.video-thumbnail {
+    width: 300px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Modal Styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background: #c92626;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (Mobile e Tablets)
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+        background-attachment: scroll;
+    }
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    /* --- MUDANÇA 3: Reset para o menu no celular --- */
+    /* Se não fizer isso, o menu some no celular por causa do 'absolute' */
+    header nav {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    .header-left-group {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 0.7rem;
+    }
+    .search {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .spacer {
+        display: none;
+    }
+    .content-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .about-box {
+        max-width: 100%;
+    }
+    .socials {
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .content-right {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .awards,
+    .video-thumbnail {
+        width: 100%;
+        max-width: 100%;
+    }
+    .awards li {
+        text-align: center;
+    }
+    .close-btn {
+        right: 20px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

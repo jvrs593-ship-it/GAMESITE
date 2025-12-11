@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Theft Auto V - Official Site</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@300;400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">GTA<span class="gta-v-logo"><strong> V</strong></span></div>
+
+            <button id="musicBtn" class="neon-music-btn" title="Los Santos Radio">
+                <i class="fas fa-pause"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Story</a></li>
+                <li><a href="#">GTA Online</a></li>
+                <li><a href="#">Heists</a></li>
+                <li><a href="#">Los Santos</a></li>
+                <li><a href="#">Social Club</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">WELCOME TO LOS SANTOS</h4>
+            <h1 class="main-title">GRAND THEFT<br>AUTO <span style="color: #009107;">  V</span></h1>
+
+            <div class="about-box">
+                <h3 style="color: #ac0000;">SOBRE O JOGO</h3>
+                <p>
+                    Entre nas vidas de três criminosos muito diferentes: Michael, Franklin e Trevor, enquanto eles arriscam tudo em uma série de assaltos ousados e perigosos que podem garantir o resto de suas vidas. Explore o mundo deslumbrante de Los Santos e Blaine County na experiência definitiva de mundo aberto da Rockstar Games.
+                </p>
+                <a href="#" class="btn-preorder">COMPRAR AGORA</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a> <div class="studio-logo">
+                    <small>Developed by</small><br>
+                    <strong>Rockstar North</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="awards">
+                <h3 style="color: #ac0000;">PRÊMIOS & ACLAMAÇÃO</h3>
+                <ul>
+                    <li><strong>VGX Awards</strong> - Jogo do Ano <br><span>Dezembro, 2013</span></li>
+                    <li><strong>BAFTA Games Awards</strong> - Melhor Jogo Britânico <br><span>Março, 2014</span></li>
+                    <li><strong>The Game Awards</strong> - Melhor Remaster (PS5/Xbox) <br><span>Dezembro, 2022</span></li>
+                    <li><strong>Golden Joystick</strong> - Melhor Multiplayer <br><span>Outubro, 2013</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3 style="color: #ffffff;">GTA V Official Trailer</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="fotos/gta-5.jpg" alt="Trailer GTA V">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/GTA_V_Trailer.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/GTA_Theme.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

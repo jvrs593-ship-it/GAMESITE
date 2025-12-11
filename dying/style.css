@@ -1,0 +1,512 @@
+/* =========================================
+   DYING LIGHT: THE BEAST - DARK THEME (CORRIGIDO)
+   ========================================= */
+
+
+/* Reset Básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Scrollbar customizada */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8a0000;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #e0e0e0;
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://static0.dualshockersimages.com/wordpress/wp-content/uploads/2025/06/dying-light-the-beast.jpg?w=1600&h=900&fit=crop') no-repeat center center/cover;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+}
+
+
+/* Overlay Sombrio */
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%);
+    z-index: -1;
+}
+
+
+/* Header */
+
+header {
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 10;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+
+/* Botão de Música */
+
+.beast-music-btn {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ccc;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.beast-music-btn:hover {
+    border-color: #ff0000;
+    color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.beast-music-btn.playing {
+    border-color: #ff0000;
+    color: #ff0000;
+    background: rgba(20, 0, 0, 0.9);
+    animation: pulseBlood 2s infinite;
+}
+
+@keyframes pulseBlood {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.2);
+    }
+}
+
+
+/* Menu */
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 0.85rem;
+}
+
+.menu a:hover {
+    color: #ff3333;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.search {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+.search:hover {
+    color: white;
+}
+
+
+/* Container Principal */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 100px);
+    padding: 0 60px;
+    align-items: center;
+}
+
+.content-left {
+    z-index: 2;
+}
+
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    color: #888;
+    margin-bottom: 0px;
+    /* Reduzido o espaço */
+    font-weight: 300;
+}
+
+
+/* --- TÍTULO CORRIGIDO (TAMANHO REDUZIDO) --- */
+
+.main-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 4.5rem;
+    /* Reduzido de 6rem para 4.5rem */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    line-height: 0.95;
+    /* Melhor espaçamento entre linhas */
+    color: white;
+    text-shadow: 0 0 30px rgba(255, 0, 0, 0.3), 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.about-box {
+    max-width: 480px;
+    background: rgba(5, 5, 5, 0.85);
+    padding: 25px;
+    border-left: 4px solid #8a0000;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.about-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ff3333;
+    font-size: 1.1rem;
+}
+
+.about-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.btn-preorder {
+    display: inline-block;
+    background-color: #8a0000;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    border: 1px solid #aa0000;
+}
+
+.btn-preorder:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    color: black;
+}
+
+.socials {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.socials i {
+    font-size: 1.3rem;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.studio-logo {
+    border-left: 1px solid #444;
+    padding-left: 15px;
+    line-height: 1.2;
+    color: #888;
+}
+
+.studio-logo strong {
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+/* Coluna Direita */
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.awards {
+    margin-bottom: 40px;
+    width: 350px;
+}
+
+.awards h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: #ff3333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.awards ul {
+    list-style: none;
+}
+
+.awards li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ccc;
+}
+
+.awards li span {
+    font-size: 0.75rem;
+    color: #666;
+    display: block;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+
+.trailer-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.video-thumbnail {
+    width: 320px;
+    height: 180px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.5s;
+    filter: brightness(0.7) grayscale(50%);
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+    filter: brightness(1) grayscale(0%);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(138, 0, 0, 0.8);
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    transition: 0.3s;
+}
+
+.video-thumbnail:hover .play-btn {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #222;
+    box-shadow: 0 0 50px rgba(138, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #666;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+    transform: rotate(90deg);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 4rem;
+    }
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+        background-attachment: scroll;
+    }
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+        background: linear-gradient(to bottom, black, transparent);
+    }
+    header nav {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    .header-left-group {
+        justify-content: center;
+        width: 100%;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-size: 0.8rem;
+    }
+    .search,
+    .spacer {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        margin-top: 10px;
+    }
+    .content-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Tamanho do título no celular */
+    .main-title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .about-box {
+        max-width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        border-left: none;
+        border-top: 4px solid #8a0000;
+    }
+    .socials {
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .content-right {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .awards,
+    .video-thumbnail {
+        width: 100%;
+        max-width: 100%;
+    }
+    .close-btn {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+}

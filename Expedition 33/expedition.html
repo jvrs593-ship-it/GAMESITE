@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clair Obscur: Expedition 33</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="frame-border top"></div>
+    <div class="frame-border bottom"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">CLAIR OBSCUR <br><span>EXPEDITION 33</span></div>
+
+            <button id="musicBtn" class="obscur-music-btn" title="La Peintresse">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Lumière</a></li>
+                <li><a href="#">Expedition</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">World</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">CLAIR OBSCUR</h4>
+
+            <h1 class="main-title">EXPEDITION <span class="highlight-text">33</span></h1>
+
+            <div class="about-box">
+                <h3>UM RPG POR TURNOS REATIVO</h3>
+                <p>
+                    Uma vez por ano, a Pintora acorda e pinta um número amaldiçoado em seu monólito. Todos com essa idade viram fumaça e desaparecem. Amanhã ela pintará o "33". Junte-se a Gustave e sua expedição em uma jornada desesperada para destruir a Pintora e quebrar
+                    o ciclo da morte.
+                </p>
+                <a href="#" class="btn-preorder">COMPRE O JOGO</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="studio-logo">
+                    <small>Created by</small><br>
+                    <strong>SANDFALL INTERACTIVE</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="awards">
+                <h3>DESTAQUES</h3>
+                <ul>
+                    <li><strong>Xbox Showcase</strong> - Revelação Mundial <br><span>Junho, 2024</span></li>
+                    <li><strong>Unreal Engine 5</strong> - Visuais Next-Gen <br><span>Powered by UE5</span></li>
+                    <li><strong>Kepler Interactive</strong> - Publicadora Global <br><span>2025 Release</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3>REVEAL TRAILER</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="foto/LOGO.jpg" alt="Trailer Expedition 33">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/Expedition33_Trailer.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/expedition33_theme.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

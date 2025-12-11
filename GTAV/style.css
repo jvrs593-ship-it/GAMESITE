@@ -1,0 +1,465 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Roboto é mais limpo, estilo Social Club / Menus do GTA */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    /* Imagem de fundo: Procure por "GTA V Los Santos Skyline Wallpaper" */
+    background: url('fotos/GTA5Logo-q82-w240-h.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente mais quente/urbano (Los Santos Sunset vibe) */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%);
+    z-index: -1;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.9rem;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Estilo especial para o "V" ficar com cara de logo */
+.gta-v-logo {
+    color:green;
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    line-height: 0.9;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
+    font-style: normal; /* GTA é mais "sólido", menos inclinado que Forza */
+}
+
+/* --- BOTÃO DE MÚSICA --- */
+.neon-music-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.neon-music-btn:hover {
+    background: #ac0000; /* Verde GTA */
+    border-color: #ac0000;
+    color: black;
+    box-shadow: 0 0 15px rgba(117, 192, 67, 0.6);
+}
+
+.neon-music-btn.playing {
+    border-color: #ac0000;
+    color: #ac0000;
+    animation: pulseGreen 1.5s infinite alternate;
+}
+
+@keyframes pulseGreen {
+    from { box-shadow: 0 0 5px #ac0000; }
+    to { box-shadow: 0 0 20px #ac0000; }
+}
+
+/* --- MENU --- */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.3s;
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif; /* Fonte estilo HUD */
+}
+
+/* Efeito de barra verde em baixo */
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background-color: #ac0000;
+    transition: width 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #ac0000;
+}
+
+.search {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.search:hover {
+    color: #ac0000;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 80px);
+    padding: 0 50px;
+    align-items: center;
+}
+
+.content-left {
+    padding-left: 20px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Chakra Petch', sans-serif;
+    border-left: 4px solid #ac0000;
+    padding-left: 10px;
+}
+
+.main-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    line-height: 0.9;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
+    font-style: normal; /* GTA é mais "sólido", menos inclinado que Forza */
+}
+
+.about-box {
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.85); /* Fundo preto sólido típico da Rockstar */
+    padding: 30px;
+    border-top: 5px solid #ac0000; /* Barra verde no topo */
+    border-radius: 4px;
+    /* Removido o skew para ficar mais "quadrado" estilo GTA */
+}
+
+.about-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ac0000;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.about-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Botão de Compra - Estilo "Wanted" / Ação */
+.btn-preorder {
+    display: inline-block;
+    background-color: #ac0000; /* Verde GTA */
+    color: black;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: 2px solid #ac0000;
+    font-family: 'Anton', sans-serif;
+}
+
+.btn-preorder:hover {
+    background-color: transparent;
+    color: #ac0000;
+    box-shadow: 0 0 20px rgba(117, 192, 67, 0.4);
+}
+
+/* --- SOCIAIS --- */
+.socials {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials i {
+    font-size: 1.4rem;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    color: #ac0000;
+    transform: scale(1.1);
+}
+
+.studio-logo {
+    border-left: 2px solid #ac0000;
+    padding-left: 15px;
+    line-height: 1.2;
+    color: white;
+}
+
+/* --- DIREITA --- */
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.awards {
+    margin-bottom: 50px;
+    width: 320px;
+}
+
+.awards h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #ac0000;
+    display: inline-block;
+    color: white;
+}
+
+.awards ul {
+    list-style: none;
+}
+
+.awards li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.awards li span {
+    font-size: 0.8rem;
+    color: #ac0000; /* Verde */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- TRAILER --- */
+.trailer-box {
+    text-align: right;
+}
+
+.trailer-box h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.video-thumbnail {
+    width: 320px;
+    height: 180px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid white;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    transition: transform 0.3s;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);
+    border-color: #ac0000;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ac0000; /* Botão verde */
+    color: black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border-radius: 0; /* Botão quadrado estilo GTA */
+}
+
+.video-thumbnail:hover .play-btn {
+    background: white;
+    color: black;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* --- MODAL (Vídeo) --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ac0000; /* Borda Verde no Modal */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    background: black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #ac0000;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 9999;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+    .main-title { font-size: 4rem;}
+    .container { padding: 0 30px; }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+        background-attachment: scroll;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background: black;
+    }
+    .header-left-group { justify-content: center; }
+    .menu { flex-wrap: wrap; justify-content: center; font-size: 0.8rem; }
+    .search, .spacer { display: none; }
+    
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    .content-left {
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-title { font-size: 3.5rem; }
+    .subtitle { border-left: none; border-bottom: 2px solid #ac0000; padding-bottom: 5px; }
+
+    .about-box {
+        border-top: 5px solid #ac0000;
+        border-left: none;
+    }
+    
+    .btn-preorder { width: 100%; }
+
+    .content-right {
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .awards, .video-thumbnail, .trailer-box {
+        width: 100%;
+        text-align: center;
+    }
+    .trailer-box { text-align: center; }
+}

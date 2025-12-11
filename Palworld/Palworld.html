@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palworld - Official Site</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">PAL<span class="highlight-text">WORLD</span></div>
+
+            <button id="musicBtn" class="round-music-btn" title="Island Vibes">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Paldex</a></li>
+                <li><a href="#">Survival</a></li>
+                <li><a href="#">Building</a></li>
+                <li><a href="#">Breeding</a></li>
+                <li><a href="#">Patch Notes</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">COLLECT • SURVIVE • BUILD</h4>
+            <h1 class="main-title">PAL<span class="outline-text">WORLD</span></h1>
+
+            <div class="about-box">
+                <h3>BEM-VINDO ÀS ILHAS PALPAGOS</h3>
+                <p>
+                    Palworld é um jogo de sobrevivência e criação em mundo aberto para multijogadores. Lute, cultive, construa e trabalhe ao lado de criaturas misteriosas chamadas "Pals". Use armas de fogo, explore masmorras e desafie chefes poderosos nesta aventura insana.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn-play">JOGAR AGORA</a>
+                    <a href="#" class="btn-steam"><i class="fab fa-steam"></i> STEAM</a>
+                </div>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <div class="studio-logo">
+                    <small>Developed by</small><br>
+                    <strong>POCKETPAIR</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="stats-card">
+                <h3>RECORDES & SUCESSO</h3>
+                <ul>
+                    <li><strong>Steam Charts</strong> - #1 Mais Jogado (2024) <br><span>2.1 Milhões Simultâneos</span></li>
+                    <li><strong>Vendas Globais</strong> - 25 Milhões+ <br><span>Primeiro Mês</span></li>
+                    <li><strong>Xbox Game Pass</strong> - Maior Lançamento 3rd Party <br><span>Janeiro, 2024</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3>ASSISTA AO TRAILER</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="fotos/trailer-pw.jpg" alt="Trailer Palworld">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/Palworld_Trailer.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/Palworld_Theme.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

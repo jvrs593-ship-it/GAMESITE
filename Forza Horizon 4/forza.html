@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 - Official Site</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="header-left-group">
+            <div class="logo">Forza <br><span style="top:100px;background:linear-gradient(90deg,#ffb300,#fc0abb);color: #ffffff;">Horizon 4</span></div>
+
+            <button id="musicBtn" class="neon-music-btn" title="Trilha Sonora">
+                <i class="fas fa-pause"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Horizon</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Gameplay</a></li>
+                <li><a href="#">Garagem</a></li>
+                <li><a href="#">Mapa</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            Search <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-left">
+            <h4 class="subtitle">WELCOME TO RACE</h4>
+            <h1 class="main-title">Forza <span style="color: #ffffff; display:block;">Horizon 4</span></h1>
+
+            <div class="about-box">
+                <h3 style="color: #fc0abb;">SOBRE O JOGO</h3>
+                <p>
+                    Forza Horizon 4 é um jogo de corrida em mundo aberto desenvolvido pela Playground Games em colaboração com a Turn 10 e publicado pela Xbox Game Studios, que na época do lançamento ainda era conhecida como Microsoft Studios. É o quarto da franquia Forza
+                    Horizon e o décimo primeiro da edição Forza
+                </p>
+                <a href="#" class="btn-preorder">COMPRE AGORA</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="studio-logo">
+                    <small>Produced by</small><br>
+                    <strong>Ben Thaker-Fell /</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+        <section class="content-right">
+            <div class="awards">
+                <h3 style="color: #fc0abb;">PRÊMIOS & INDICAÇÕES</h3>
+                <ul>
+                    <li><strong>Gamescom Awards</strong> - Melhor RPG <br><span>Agosto, 2020</span></li>
+                    <li><strong>Golden Joystick Awards</strong> - Jogo Mais Aguardado <br><span>Novembro, 2019</span></li>
+                    <li><strong>The Game Awards</strong> - Melhor Narrativa (Indicado) <br><span>Dezembro, 2021</span></li>
+                    <li><strong>Steam Awards</strong> - Melhor Trama <br><span>Janeiro, 2022</span></li>
+                </ul>
+            </div>
+
+            <div class="trailer-box">
+                <h3 style="color: #00f0ff;">Forza Horizon 4 Trailer</h3>
+                <div class="video-thumbnail" onclick="openModal()">
+                    <img src="../Forza Horizon 4/fotos/4k Ultra HD Forza Horizon Wallpaper.jpg" alt="Trailer Cyberpunk">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="myVideo" width="100%" height="100%" controls>
+                <source src="video/Cyberpunk 2077 Trailer.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/Cyberpunk_ Edgerunners _ Opening Credits_ _This Fffire - Franz Ferdinand_ [43d0Jq1XKXI].mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
